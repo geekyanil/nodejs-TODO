@@ -25,4 +25,8 @@ app.use(
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/task', taskRouter);
 
+app.get('/', (req, res) => {
+  res.send('API Is Working');
+});
+
 app.use(errorMiddleware);
